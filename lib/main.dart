@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog/pages/post/home_page.dart';
+import 'package:flutter_blog/pages/post/write_page.dart';
 import 'package:flutter_blog/pages/user/join_page.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // route설계 필요 없음.
-      home: JoinPage(),
+      home: WritePage(),
     );
   }
 }
