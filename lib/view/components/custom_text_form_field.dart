@@ -4,15 +4,20 @@ class CustomTextFormField extends StatelessWidget {
   final String hint;
   final funValidator;
   final String? value;
+  final controller;
 
   const CustomTextFormField(
-      {required this.hint, required this.funValidator, this.value});
+      {required this.hint,
+      required this.funValidator,
+      this.value,
+      this.controller});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: TextFormField(
+        controller: controller,
         initialValue: value,
         validator: funValidator,
         obscureText: hint == "Password" ? true : false,
