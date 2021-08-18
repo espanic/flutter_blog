@@ -8,4 +8,7 @@ class PostProvider extends GetConnect {
       get("$host/post", headers: {"authorization": jwtToken ?? ""});
   Future<Response> findById(int id) =>
       get("$host/post$id", headers: {"authorization": jwtToken ?? ""});
+
+  Future<Response> deleteById(int id) =>
+      delete("$host/post$id", headers: {"authorization": jwtToken ?? ""});
 }
