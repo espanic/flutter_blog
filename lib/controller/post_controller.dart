@@ -13,6 +13,10 @@ class PostController extends GetxController {
     findAll();
   }
 
+  Future<void> updateById(int id, String title, String content) async {
+    await _postRepository.updateById(id, title, content);
+  }
+
   Future<void> deleteById(int id) async {
     int result = await _postRepository.deleteById(id);
     if (result == 1) {
